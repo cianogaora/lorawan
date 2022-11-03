@@ -26,6 +26,7 @@
 #include "ns3/lora-phy.h"
 #include "ns3/lorawan-mac.h"
 #include "ns3/class-a-end-device-lorawan-mac.h"
+#include "ns3/class-b-end-device-lorawan-mac.h"
 #include "ns3/lora-device-address-generator.h"
 #include "ns3/gateway-lorawan-mac.h"
 #include "ns3/node-container.h"
@@ -40,7 +41,7 @@ public:
   /**
    * Define the kind of device. Can be either GW (Gateway) or ED (End Device).
    */
-  enum DeviceType { GW, ED_A };
+  enum DeviceType { GW, ED_A, ED_B};
 
   /**
    * Define the operational region.
@@ -122,6 +123,7 @@ private:
    * Perform region-specific configurations for the 868 MHz EU band.
    */
   void ConfigureForEuRegion (Ptr<ClassAEndDeviceLorawanMac> edMac) const;
+  void ConfigureForEuRegionB (Ptr<ClassBEndDeviceLorawanMac> edMac) const;
 
   /**
    * Perform region-specific configurations for the 868 MHz EU band.
@@ -138,7 +140,7 @@ private:
    * Perform region-specific configurations for the SINGLECHANNEL band.
    */
   void ConfigureForSingleChannelRegion (Ptr<ClassAEndDeviceLorawanMac> edMac) const;
-
+  void ConfigureForSingleChannelRegionB (Ptr<ClassBEndDeviceLorawanMac> edMac) const;
   /**
    * Perform region-specific configurations for the SINGLECHANNEL band.
    */
@@ -154,7 +156,7 @@ private:
    * Perform region-specific configurations for the ALOHA band.
    */
   void ConfigureForAlohaRegion (Ptr<ClassAEndDeviceLorawanMac> edMac) const;
-
+  void ConfigureForAlohaRegionB (Ptr<ClassBEndDeviceLorawanMac> edMac) const;
   /**
    * Perform region-specific configurations for the ALOHA band.
    */

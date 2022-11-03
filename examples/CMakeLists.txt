@@ -60,3 +60,10 @@ build_lib_example(
     ${libcore}
     ${liblorawan}
 )
+build_lib_example(
+  NAME class-b-demo 
+  SOURCE_FILES class-b-demo.cc
+  LIBRARIES_TO_LINK
+    ${libcore}
+    ${liblorawan}
+)
