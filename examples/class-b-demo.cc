@@ -23,17 +23,17 @@ int main (int argc, char *argv[])
 {
 
   // Set up logging
-  LogComponentEnable ("SimpleLorawanNetworkExample", LOG_LEVEL_ALL);
+//  LogComponentEnable ("SimpleLorawanNetworkExample", LOG_LEVEL_ALL);
   LogComponentEnable ("LoraChannel", LOG_LEVEL_INFO);
   LogComponentEnable ("LoraPhy", LOG_LEVEL_ALL);
   LogComponentEnable ("EndDeviceLoraPhy", LOG_LEVEL_ALL);
-  LogComponentEnable ("GatewayLoraPhy", LOG_LEVEL_ALL);
-  LogComponentEnable ("LoraInterferenceHelper", LOG_LEVEL_ALL);
+//  LogComponentEnable ("GatewayLoraPhy", LOG_LEVEL_ALL);
+//  LogComponentEnable ("LoraInterferenceHelper", LOG_LEVEL_ALL);
   LogComponentEnable ("LorawanMac", LOG_LEVEL_ALL);
   LogComponentEnable ("EndDeviceLorawanMac", LOG_LEVEL_ALL);
   LogComponentEnable ("ClassBEndDeviceLorawanMac", LOG_LEVEL_ALL);
   LogComponentEnable ("GatewayLorawanMac", LOG_LEVEL_ALL);
-  LogComponentEnable ("LogicalLoraChannelHelper", LOG_LEVEL_ALL);
+//  LogComponentEnable ("LogicalLoraChannelHelper", LOG_LEVEL_ALL);
   LogComponentEnable ("LogicalLoraChannel", LOG_LEVEL_ALL);
   LogComponentEnable ("LoraHelper", LOG_LEVEL_ALL);
   LogComponentEnable ("LoraPhyHelper", LOG_LEVEL_ALL);
@@ -135,6 +135,10 @@ int main (int argc, char *argv[])
   /****************
   *  Simulation  *
   ****************/
+//    if(endDevices.)
+    
+//    Simulator::Schedule(Seconds(129.0), &OneShotSenderHelper::Install, endDevices.Get(0));
+    
 
   Simulator::Stop (Hours (2));
 

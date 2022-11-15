@@ -17,7 +17,7 @@ namespace ns3 {
             ClassBEndDeviceLorawanMac ();
             virtual ~ClassBEndDeviceLorawanMac ();
 
-            void scheduleBeaconSlots();
+            void scheduleBeaconSlots(Time interval);
             void receiveBeacon();
 
         private:
@@ -27,6 +27,7 @@ namespace ns3 {
             EventId m_closeFirstWindow;
             EventId m_closeSecondWindow;
             EventId m_secondReceiveWindow;
+            EventId m_openBeaconSlot;
 
             double m_secondReceiveWindowFrequency;
 
